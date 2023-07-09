@@ -1,0 +1,68 @@
+:root {
+  font-size: 10px;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-size: 0.625; */
+  background-color: #45badd;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  height: 100vh;
+  width: 100vw;
+
+  background: url("./robot.gif");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  width: 20rem;
+  height: 5rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2rem;
+  color: white;
+  background: #ff3482;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  filter: brightness(95%);
+}
+
+button:active {
+  transform: scale(98%);
+}
+
+button:disabled {
+  cursor: default;
+  filter: brightness(30%);
+}
+
+/* Media Queries */
+@media screen and (max-width: 1000px) {
+  .container {
+    background-size: cover;
+    background-position: center center;
+  }
+
+  button {
+    box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.5);
+  }
+}
